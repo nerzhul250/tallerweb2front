@@ -196,6 +196,7 @@ export default {
             .put("/users/" + usuarioEdited._id, usuarioEdited)
             .then((res) => {
               console.log(res);
+              this.refresh()
             })
             .catch((err) => {
               console.log(err);
@@ -208,6 +209,7 @@ export default {
             .post("/users", nuevoUsuario)
             .then((res) => {
               console.log(res);
+              this.refresh()
             })
             .catch((err) => {
               console.log(err);
@@ -217,7 +219,6 @@ export default {
       } else {
         alert("Faltan campos por llenar");
       }
-      this.refresh()
     },
     editItem(item) {
       this.editedIndex = item._id;
@@ -237,12 +238,12 @@ export default {
         .delete("/users/" + this.editedIndex)
         .then((res) => {
           console.log(res);
+          this.refresh();
         })
         .catch((error) => {
           console.log(error);
         });
       this.closeDelete();
-      this.refresh();
     },
     initialize() {
       console.log("doing nothing, jejeje");
