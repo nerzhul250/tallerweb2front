@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+DEPLOYMENT:
+https://peaceful-basin-98275.herokuapp.com/
